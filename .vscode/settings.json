@@ -1,0 +1,6 @@
+{
+  "editor.formatOnSave": true,
+  "editor.renderFinalNewline": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true
+}

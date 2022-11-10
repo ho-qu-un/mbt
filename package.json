@@ -1,0 +1,52 @@
+{
+  "name": "mbt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "start": "npm run dev",
+    "lint": "eslint",
+    "build": "tsc && vite build",
+    "test": "vitest run",
+    "all": "npm test && npm run lint && npm run build",
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "@xstate/react": "^3.0.1",
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.8.4",
+    "xstate": "^4.34.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.0-alpha.47",
+    "@storybook/addon-interactions": "^7.0.0-alpha.47",
+    "@storybook/addon-links": "^7.0.0-alpha.47",
+    "@storybook/react": "^7.0.0-alpha.47",
+    "@storybook/react-vite": "^7.0.0-alpha.47",
+    "@storybook/testing-library": "^0.0.13",
+    "@testing-library/react": "^13.4.0",
+    "@xstate/test": "^0.5.1",
+    "eslint-plugin-storybook": "^0.6.7",
+    "happy-dom": "^7.6.6",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1",
+    "storybook": "^7.0.0-alpha.47",
+    "ts-node": "^10.9.1",
+    "vite": "^3.2.2",
+    "vitest": "^0.24.5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
