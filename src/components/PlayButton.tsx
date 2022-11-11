@@ -9,7 +9,7 @@ export const playButtonMachineDefinition = {
     ready: {},
   },
   schema: {
-    events: {} as { type: "NOOP" },
+    events: {} as { type: "HI" },
     context: {},
   },
   tsTypes: {} as import("./PlayButton.typegen").Typegen0,
@@ -22,9 +22,8 @@ export function PlayButton() {
   const [state, send] = useMachine(playButtonMachine);
   return (
     <div>
-      {state.value === "ready" && <h1>Ready</h1>}
-      <button onClick={() => send("NOOP")} role="play-button">
-        NOOP
+      <button onClick={() => send("HI")} role="play-button">
+        HI
       </button>
     </div>
   );

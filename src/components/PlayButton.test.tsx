@@ -9,10 +9,7 @@ describe("Play button", () => {
   const machineDefinition = playButtonMachineDefinition as any;
   machineDefinition.states.ready.meta = {
     test: async (r: RenderResult) => {
-      assert.ok(r.getByText("Ready"));
-      await testScreenshotsInStorybook({
-        component: PlayButton,
-      });
+      assert.ok(r.getByText("HI"));
     },
   };
 
@@ -20,7 +17,7 @@ describe("Play button", () => {
   const testModel = createModel<RenderResult>(testMachine).withEvents({
     NOOP: {
       exec: async ({ getByText }) => {
-        fireEvent.click(getByText("NOOP"));
+        fireEvent.click(getByText("HI"));
       },
     },
   });
@@ -41,13 +38,3 @@ describe("Play button", () => {
     testModel.testCoverage();
   });
 });
-
-interface TakeScreenshotInStorybookParams {
-  component: () => JSX.Element;
-}
-
-async function testScreenshotsInStorybook(params: TakeScreenshotInStorybookParams) {
-  return new Promise((resolve, reject) => {
-    setTimeout(resolve, 1000);
-  });
-}
