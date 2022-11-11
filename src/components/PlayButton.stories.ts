@@ -8,11 +8,7 @@ const meta: Meta<typeof PlayButton> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof PlayButton>;
 
-export const Primary: Story = {
-  args: {
-    primary: true,
-    label: "PlayButton",
-  },
+export const Primary: StoryObj<typeof PlayButton> = {
+  args: {},
 };
