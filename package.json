@@ -36,6 +36,7 @@
     "@storybook/react-vite": "^7.0.0-alpha.47",
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/react": "^13.4.0",
+    "@vitest/ui": "^0.25.2",
     "@xstate/test": "^0.5.1",
     "chromatic": "^6.11.4",
     "eslint-plugin-storybook": "^0.6.7",
